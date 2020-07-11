@@ -1,9 +1,4 @@
-<p align="center">
-  <a href="" rel="noopener">
- <img width=200px height=200px src="https://www.hackyourfuture.dk/static/logo-dark.svg" alt="Project logo"></a>
-</p>
-
-<h3 align="center">Meal sharing api</h3>
+<h1 align="center">Meal sharing api</h1>
 
 <div align="center">
 
