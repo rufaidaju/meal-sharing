@@ -59,14 +59,14 @@ router.get("/", async (request, response) => {
     }
 
     if ( utils.isEmpty(request.query)  ){
-      correspondingMeals= await knex("meal").select("title");
+      correspondingMeals= await knex("meal").select("*");
     }
     if( correspondingMeals.length == 0 ){
       response.send("There are no meals to show ")
     }
 
     response.json(correspondingMeals); 
-  } catch (error) { 
+  } catch (error) {  
     throw error;
   }
 });
@@ -74,7 +74,8 @@ router.get("/", async (request, response) => {
 router.post("/", async (request, response) => {
   try {
     
-    let meal = await knex('meal').insert({title:request.body.title,
+    let meal = await knex('meal').insert({
+      title:request.body.title, 
       maxNumberOfGuests:request.body.maxNumberOfGuests, 
       description:request.body.description, 
       createdAt:new Date(request.body.createdAt) , 
@@ -87,14 +88,38 @@ router.post("/", async (request, response) => {
 
 router.put("/:id", async (request, response) => {
   try {
-    const meal =  await knex('meal').where('id',request.params.id)
-      .update({title:request.body.title,
-        maxNumberOfGuests:request.body.maxNumberOfGuests,
-        description:request.body.description,
-        createdAt:new Date(request.body.createdAt),
-        price:request.body.price
-      });
-    response.send(request.body); 
+
+    if (request.params.id != undefined){
+      const newTitle = request.params.title;
+      const newMaxNumberOfGuests = request.params.maxNumberOfGuests;
+      const newDescription = request.params.description;
+      const newCreatedAt = request.params.createdAt;
+      const newPrice =request.params.price;
+      // response.send(request.body); 
+      
+      if (newTitle){
+        await knex('meal').where('id',request.params.id)
+        .update({ title:request.body.title})
+      };
+
+      if (newMaxNumberOfGuests == 8){
+        await knex('meal').where('id',request.params.id)
+        .update({maxNumberOfGuests:request.body.newMaxNumberOfGuests});
+        response.send(request.body); 
+      }
+      // const meal =  await knex('meal').where('id',request.params.id)
+      // .update({
+      //   title:request.body.title,
+      //   maxNumberOfGuests:request.body.maxNumberOfGuests,
+      //   description:request.body.description,
+      //   createdAt:new Date(request.body.createdAt),
+      //   price:request.body.price
+      // });
+      // response.send(request.body); 
+    }else{
+      response.send(`There is no meal with id ${request.params.id} to update!`);
+    }
+    
     
   } catch (error) { 
     throw error; 
@@ -103,8 +128,15 @@ router.put("/:id", async (request, response) => {
 
 router.delete("/:id", async (request, response) => {
   try {
-     const meal =  await knex('meal').where('id',request.params.id).del()
-     response.send(`The meal wit id ${request.params.id} deleted`); 
+    const meal=  await knex('meal').where('id',request.params.id);
+    const deleteStatus =  await knex('meal').where('id',request.params.id).del();
+    
+    if (deleteStatus){
+     response.send(meal);  
+    }else{
+      response.send(`There is no meal with id ${request.params.id} to delete`);  
+    }
+
   } catch (error) { 
     throw error; 
   }
