@@ -1,3 +1,3 @@
-<h1 align="center">Meal sharing api</h1>
+<h1 align="center">Meal sharing app</h1>
 
 
