@@ -66,8 +66,15 @@ router.get("/:id", async (request, response) => {
 
   router.delete("/:id", async (request, response) => {
     try {
-       const reservation =  await knex('reservation').where('id',request.params.id).del()
-       response.send(`The reservation with id ${request.params.id} deleted`); 
+      const reservation=  await knex('reservation').where('id',request.params.id);
+      const deleteStatus =  await knex('reservation').where('id',request.params.id).del();
+      
+      if (deleteStatus){
+       response.send(reservation);  
+      }else{
+        response.send(`There is no reservation with id ${request.params.id} to delete`);  
+      }
+      
     } catch (error) { 
       throw error; 
     }
