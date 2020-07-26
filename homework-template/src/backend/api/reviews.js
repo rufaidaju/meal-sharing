@@ -42,7 +42,7 @@ router.get("/:id", async (request, response) => {
         content:request.body.content, 
         createdAt:new Date(request.body.createdAt) , 
         meal_id:Number(request.body.meal_id) 
-        })  
+        })   
         response.send(review);  
     } catch (error) {
       throw error;     
@@ -67,8 +67,15 @@ router.get("/:id", async (request, response) => {
 
   router.delete("/:id", async (request, response) => {
     try {
-       const review =  await knex('review').where('id',request.params.id).del()
-       response.send(`The review with id ${request.params.id} deleted`); 
+       const review =  await knex('review').where('id',request.params.id);
+       const deleteStatus =  await knex('review').where('id',request.params.id).del();
+       
+       if (deleteStatus){
+        response.send(review);  
+       }else{
+        response.send(`There is no review with id ${request.params.id} to delete`);  
+       }
+
     } catch (error) { 
       throw error; 
     }
