@@ -95,7 +95,7 @@ h2{
 }
 /* Home Show all meals */
 .home-all-meals-btn{
-  margin:1.5em;
+  margin:1.5em 0.5em 0.5em 0.5em;
   padding: 1em;
   border: solid 0px;
   background-color: #54af91;
@@ -103,9 +103,19 @@ h2{
   font-size: 17px;
   border-radius: 15px;
 }
-.home-all-meals-btn a{
+.home-all-meals-btn a, .home-add-meal-btn a{
   color:#d02f2f;
   font-size: 17px;
+}
+
+.home-add-meal-btn{
+  margin:0.5em;
+  padding: 1em;
+  border: solid 0px;
+  background-color: #54af91;
+  color:#d02f2f;
+  font-size: 17px;
+  border-radius: 15px;
 }
 
 /* All meals content */
@@ -147,6 +157,19 @@ h2{
   color: wheat !important;
   background-color: #54af91 !important;
   border-color: #2b5f4d !important;
+}
+
+/* Reviews for a meal */
+.review-meal-title{
+  font-size: 1.5em;
+  color: #2b5f4d;
+}
+.reviews-list{
+  list-style-type:none;
+  padding: 1em;
+}
+.reviews-list li{
+  padding: 10px;
 }
 
 
