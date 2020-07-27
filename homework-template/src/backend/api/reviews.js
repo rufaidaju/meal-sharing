@@ -8,7 +8,7 @@ const utils = require("../utils")
 router.get("/:id", async (request, response) => {
     try {
       const review =  await knex.from('review').select('*')
-        .where('id',request.params.id);
+        .where('meal_id',request.params.id);
 
       if (review.length == 0){ 
         response.send(404);
