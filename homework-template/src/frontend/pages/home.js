@@ -51,6 +51,11 @@ window.handleHomeRequest = () => {
           <button class="home-all-meals-btn"><a href="/meals">Show all meals</a></button>
         </div>
       </div>
+      <div class="row ">
+        <div class="col text-center">
+          <button class="home-add-meal-btn"><a href="/add-meal">Add meal</a></button>
+        </div>
+      </div>
     </div>
     `);
 
