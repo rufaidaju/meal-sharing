@@ -12,7 +12,7 @@ window.handleMealRequest = async (params) => {
         </div>
         <div class="col-md-8">
           <div class="card-body">
-            <p class="card-text">${meal[0].descreption}</p>
+            <p class="card-text">${meal[0].description}</p>
             <p>Max number of guests :${meal[0].maxNumberOfGuests}</p>
             <p>Price:${meal[0].price}</p>
             <p class="card-text"><small class="text-muted">Created at: ${meal[0].createdAt}</small></p>
