@@ -112,6 +112,7 @@ h2{
 .meals-card{
   margin-bottom: 40px;
   height: 89%;
+  border:solid 1px #2a5f4d;
 }
 .meals-card-img-top{
   height: 50%;
@@ -120,6 +121,9 @@ h2{
   font-family: cursive;
   text-align: center;
   color: #d02f2f;
+}
+.meals-card-body{
+  padding: 1em;
 }
 .meals-card-text{
   font-family: cursive;
