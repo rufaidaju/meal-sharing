@@ -17,8 +17,8 @@ window.handleMealRequest = async (params) => {
             <p>Price:${meal[0].price}</p>
             <p class="card-text"><small class="text-muted">Created at: ${meal[0].createdAt}</small></p>
             <a href="/reservation/${meal[0].id}"  class="btn btn-primary meal-card-btn">Reservation</a>
-            <a href="meals/${meal.id}" class="btn btn-primary meal-card-btn">Reviews</a>
-            <a href="meals/${meal.id}" class="btn btn-primary meal-card-btn">Review</a>
+            <a href="/reviews/${meal[0].id}" class="btn btn-primary meal-card-btn">Reviews</a>
+            <a href="/review/${meal[0].id}" class="btn btn-primary meal-card-btn">Review</a>
           </div>
         </div>
       </div>
