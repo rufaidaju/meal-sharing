@@ -14,6 +14,11 @@ window.handleMealsRequest = async (params,query) => {
       <div class="row justify-content-center text-center all-meals">
         
       </div>
+      <div class="row ">
+        <div class="col text-center">
+          <button class="home-add-meal-btn"><a href="/add-meal">Add meal</a></button>
+        </div>
+      </div>
     </div>
     `);
        
