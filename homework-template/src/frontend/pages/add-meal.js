@@ -1,29 +1,85 @@
 window.handleAddMealRequest = async (params) => {
-    document.querySelector('.content').insertAdjacentHTML('beforeend',` <h2>rrr</h2>`)
+    document.querySelector('.content').insertAdjacentHTML('beforeend',`
+     <h2>Add a new meal</h2>
+     <form class="add-meal-form">
+     <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-6">
+          <input type="text" class="form-control input-meal-title" placeholder="Meal title" required>
+        </div>
+      </div>
 
-    // const mealsResponse = 
-    // await fetch(`/api/meals/${params.id}`)
-    // .then((response) => response.json())
-    // .then((meal)=>{console.log(meal[0]);
-    //   document.querySelector('.content').insertAdjacentHTML('beforeend',`
-    //   <h2>${meal[0].title}</h2>
-    //   <div class="card mb-3 justify-content-center text-center">
-    //     <div class="row no-gutters">
-    //       <div class="col-md-4">
-    //         <img src="../pictures/food5.jpg" class="meal-card-img" alt="${meal[0].title}">
-    //       </div>
-    //       <div class="col-md-8">
-    //         <div class="card-body">
-    //           <p class="card-text">${meal[0].description}</p>
-    //           <p>Max number of guests :${meal[0].maxNumberOfGuests}</p>
-    //           <p>Price:${meal[0].price}</p>
-    //           <p class="card-text"><small class="text-muted">Created at: ${meal[0].createdAt}</small></p>
-    //           <a href="/reservation/${meal[0].id}"  class="btn btn-primary meal-card-btn">Reservation</a>
-    //           <a href="/reviews/${meal[0].id}" class="btn btn-primary meal-card-btn">Reviews</a>
-    //           <a href="/review/${meal[0].id}" class="btn btn-primary meal-card-btn">Review</a>
-    //         </div>
-    //       </div>
-    //     </div>
-    //   </div>
-    //   `)});
+      <div class="row justify-content-center">
+        <div class="col-6">
+          <textarea class="input-meal-description" rows="2" cols="" placeholder="Insert  description to the meal..." required></textarea>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-3">
+            <input type="number" class="form-control input-meal-maxNumberOfGuests" placeholder="Max number of guests" required>
+        </div>
+        <div class="col-3">
+          <input type="number" class="form-control input-meal-price" placeholder="Price" required>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-6 text-center">
+          <button type="submit" class="btn btn-primary add-meal-card-btn">Submit</button>
+        </div>
+      </div>
+      </div>
+
+      
+     </form>
+     
+     `);
+
+
+     // Add a new meal
+    document.querySelector('.add-meal-form').addEventListener('submit',addMeal);
+    async function addMeal(e){ 
+        e.preventDefault();
+        const createdAt = new Date();
+        let newMeal = {
+            'title' : document.querySelector('.input-meal-title').value ,
+            'maxNumberOfGuests' : document.querySelector('.input-meal-maxNumberOfGuests').value ,
+            'description' : document.querySelector('.input-meal-description').value ,
+            'price' : document.querySelector('.input-meal-price').value ,
+            'createdAt' : createdAt ,
+        }
+
+        await fetch('/api/meals', {
+            method: "POST",
+            headers: {  
+                "Content-type":
+                "application/x-www-form-urlencoded; charset=UTF-8"  
+            },  
+            body:`title=${newMeal.title}&maxNumberOfGuests=${newMeal.maxNumberOfGuests}
+            &description=${newMeal.description}&price=${newMeal.price}&createdAt=${newMeal.createdAt}`
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert('Sucsess');
+            document.querySelector(".add-meal-form").style.display ="none";
+            document.querySelector('.content').insertAdjacentHTML('beforeend',`
+            <div class="row">
+              <div class="col text-center">
+                    <p class="add-meal-submitted">You have added the meal successfully</p>
+              </div>
+           </div>
+
+           <div class="row">
+           <div class="col text-center">
+           <button class="home-all-meals-btn"><a href="/meals">Show all meals</a></button>
+       </div>
+           </div>
+           `);
+           console.log('Success:', data);
+          }).catch((error) => {
+           console.error('Error: ', error);
+          });
+    };
+
+    
   };
