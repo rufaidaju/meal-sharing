@@ -87,7 +87,7 @@ h2{
   margin-bottom: 3em;
   color:#d02f2f;
 }
-.experience-text{
+.experience-text, .add-meal-submitted{
   padding: 1em;
   font-family: cursive;
   /* color :#37373e; */
@@ -172,6 +172,20 @@ h2{
   padding: 10px;
 }
 
+
+
+/* Add-meal */
+.input-meal-description{
+  width: 100%;
+  margin: 1em 0em;
+}
+.add-meal-card-btn{
+  width:100%;
+  margin:1em 0em;
+  color: wheat !important;
+  background-color: #54af91 !important;
+  border-color: #2b5f4d !important;
+}
 
 /* Footer  */
 .footer{
