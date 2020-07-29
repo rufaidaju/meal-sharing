@@ -29,6 +29,11 @@ window.handleReservationRequest = async(params,query) => {
                                         <button type="submit" class="btn btn-primary">Submit</button>
                                     </div>
                                 </div>
+                                <div class="row">
+                                    <div class="col text-center">
+                                        <button class="home-all-meals-btn"><a href="/meals/${params.meal_id}">Back to the meal</a></button>
+                                    </div>
+                                </div>
                             </form>      
                         </div>
                     </div>
@@ -65,6 +70,11 @@ window.handleReservationRequest = async(params,query) => {
                     <button class="home-all-meals-btn"><a href="/meals">Show all meals</a></button>
                 </div>
            </div>
+           <div class="row">
+                <div class="col text-center">
+                        <button class="home-all-meals-btn"><a href="/meals/${params.meal_id}">Back to the meal</a></button>
+                </div>
+        </div>
            `);
            console.log('Success:', data);
           }).catch((error) => {
