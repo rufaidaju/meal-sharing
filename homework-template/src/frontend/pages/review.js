@@ -19,16 +19,17 @@ window.handleReviewRequest = async(params,query) => {
                                 </div>
                                 <div class="row justify-content-center">
                                     <div class="col-7 col-md-4 ">
-                                        <input type="number" class="form-control input-number-of-stars" placeholder="Number of stars" required>
                                     </div>
                                 </div>
                                 <div class="row justify-content-center">
                                     <div class="col-7 col-md-4 ">
-                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                        <button type="submit" class="btn btn-primary meal-card-btn">Submit</button>
+                                    </div>
+                                    <div class="col-7 col-md-4 text-center">
+                                        <button class="btn btn-primary meal-card-btn"><a href="/meals/${params.meal_id}">Back to the meal</a></button>
                                     </div>
                                 </div>
-                            </form>      
-                        </div>
+                            </form>  
                     </div>
                 </div>
             </div>
