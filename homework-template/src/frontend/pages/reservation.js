@@ -26,7 +26,7 @@ window.handleReservationRequest = async(params,query) => {
                                 </div>
                                 <div class="row justify-content-center">
                                     <div class="col-7 col-md-4 ">
-                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                        <button type="submit" class="home-all-meals-btn">Submit</button>
                                     </div>
                                 </div>
                                 <div class="row">
