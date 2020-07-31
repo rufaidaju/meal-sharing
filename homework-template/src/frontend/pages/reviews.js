@@ -48,7 +48,26 @@ window.handleReviewsRequest = async(params,query) => {
           </div>
         </div>
            `);
-    });
+    }).catch((error) => {
+      document.querySelector('.card-body').insertAdjacentHTML('beforeend',`
+      <div class="row">
+        <div class="col text-center">
+          <p>There are no reviews to show</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col text-center">
+          <button class="home-all-meals-btn"><a href="/meals">Show all meals</a></button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col text-center">
+          <button class="home-all-meals-btn"><a href="/meals/${params.meal_id}">Back to the meal</a></button>
+        </div>
+      </div>
+         `);
+      console.error('Error: ', error);
+     });
 
 
 }
