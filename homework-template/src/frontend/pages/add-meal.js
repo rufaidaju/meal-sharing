@@ -17,7 +17,7 @@ window.handleAddMealRequest = async (params) => {
 
         <div class="row justify-content-center">
           <div class="col-3">
-              <input type="number" class="form-control input-meal-maxNumberOfGuests" placeholder="Max number of guests" required>
+              <input type="number" class="form-control input-meal-maxNumberOfGuests" placeholder="Guests" required>
           </div>
           <div class="col-3">
             <input type="number" class="form-control input-meal-price" placeholder="Price" required>
