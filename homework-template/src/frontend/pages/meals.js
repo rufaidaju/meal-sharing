@@ -28,7 +28,7 @@ window.handleMealsRequest = async (params,query) => {
       meals.forEach( meal => 
       {
         document.querySelector('.all-meals').insertAdjacentHTML('beforeend',` 
-          <div class="col-md-6  col-lg-4">
+          <div class="col-7 col-md-6  col-lg-4 ">
             <div class="meals-card" style="width: 18rem;">
               <img src="../pictures/food1.jpg" class="meals-card-img-top card-img-top" alt="../pictures/food2.jpg">
               <div class="meals-card-body">

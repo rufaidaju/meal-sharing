@@ -27,8 +27,8 @@ window.handleHomeRequest = () => {
       </div>
 
       <div class="row text-center">
-        <div class="col">
-          <img class="mix-food" src="../pictures/food1.jpg" alt="eat with others"/>
+        <div class="col-12 col-lg-6">
+          <img class="experience-img" src="../pictures/food1.jpg" alt="eat with others"/>
         </div>
         <div class="col">
           <p class="experience-text">
