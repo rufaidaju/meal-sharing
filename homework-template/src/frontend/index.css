@@ -36,7 +36,6 @@ body {
   height: 100%;
   overflow:auto;
   min-height: 100%;
-  /* background-color: #f5ebeb; */
 }
 h2{
   font-family: cursive;
@@ -89,8 +88,6 @@ h2{
 }
 .experience-text, .add-meal-submitted{
   padding: 1em;
-  font-family: cursive;
-  /* color :#37373e; */
   color:#2a5f4d;
 }
 .experience-img{
@@ -140,8 +137,6 @@ h2{
   padding: 1em;
 }
 .meals-card-text{
-  font-family: cursive;
-  /* color :#37373e; */
   color:#2a5f4d;
 }
 .meals-card-btn{
