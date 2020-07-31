@@ -7,16 +7,15 @@ html {
   margin: 0px;
   height: 100%;
   width: 100%;
-position: relative;
-min-height: 100%;
+  min-height: 100%;
 }
 
-body {
+body { 
   min-height: 100%;
   width: 100%;  
   background-color: #f5ebeb !important;
-
-
+  position: relative;
+  padding-bottom: 80px;
 }
 .upper-bar{
   background-color: #54af91;
@@ -36,6 +35,7 @@ body {
 .content{
   height: 100%;
   overflow:auto;
+  min-height: 100%;
   /* background-color: #f5ebeb; */
 }
 h2{
@@ -93,6 +93,10 @@ h2{
   /* color :#37373e; */
   color:#2a5f4d;
 }
+.experience-img{
+  max-width: 100%;
+  max-height: 100%;
+  }
 /* Home Show all meals */
 .home-all-meals-btn{
   margin:1.5em 0.5em 0.5em 0.5em;
@@ -190,11 +194,12 @@ h2{
 /* Footer  */
 .footer{
   background-color: #f8f9fa;
-  /* position: absolute; */
+  position: absolute;
   bottom: 0;
   width: 100%;
   height: 60px;
   background-color: #f5f5f5;
+  padding: 0px 15px;
 }
 .copy-right{
   font-size:0.7em;
@@ -218,7 +223,4 @@ font-size: 1.5em;
   color :#2a5f4d;
   }
 
-.mix-food{
-max-width: 100%;
-max-height: 100%;
-}
+  
