@@ -23,5 +23,7 @@ window.handleMealRequest = async (params) => {
         </div>
       </div>
     </div>
-    `)});
+    `)}).catch((error) => {
+      console.error('Error: ', error);
+     });
 };

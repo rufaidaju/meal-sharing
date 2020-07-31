@@ -39,7 +39,9 @@ window.handleMealsRequest = async (params,query) => {
             </div>
           </div>`);
       });
-    });
+    }).catch((error) => {
+      console.error('Error: ', error);
+      });
   }
 };
 
