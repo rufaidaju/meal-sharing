@@ -1,8 +1,7 @@
 # meal-sharing
 
-## The link to th app :
-https://dev-meal-sharing.herokuapp.com/
 
+## Description
 Meal sharing website,It's an application where users can book a reservation at a meal another user has created.
 The user can add a new meal for people to join, review the meal and see all reviews for it as well.
 So as a user you can :
@@ -28,3 +27,6 @@ Database <--> Webserver <--> Frontend
 * Connecting the frontend to the backend API
 * Frontend routing(Navigo)
 * Postman
+
+### The link to th app :
+https://dev-meal-sharing.herokuapp.com/
