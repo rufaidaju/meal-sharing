@@ -1,7 +1,7 @@
 # meal-sharing
 
 
-## Description
+### Description
 Meal sharing website,It's an application where users can book a reservation at a meal another user has created.
 The user can add a new meal for people to join, review the meal and see all reviews for it as well.
 So as a user you can :
