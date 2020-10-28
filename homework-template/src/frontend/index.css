@@ -72,6 +72,7 @@ h2{
 .message-header{
   padding: 5%;
   font-size: 1.8rem;
+  margin-top: 20px;
 }
 .message-text{
   margin-top: 0;
@@ -283,8 +284,8 @@ font-size: 1.5em;
     font-size: 20px !important;
   }
   .message-header {
-    font-size: 20px;
-    margin-top:50px;
+    font-size: 19px;
+    margin-top:35px;
   }
   .message-text {
     font-size: 15px; 
