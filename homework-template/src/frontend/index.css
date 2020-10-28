@@ -186,6 +186,38 @@ h2{
   background-color: #54af91 !important;
   border-color: #2b5f4d !important;
 }
+/* About us */
+.about-title{
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color:#2b5f4d;
+  font-style: italic;
+  font-size: 25px;
+  text-shadow: 2px 2px grey;
+}
+.about{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 50px;;
+  
+}
+.about-text{
+  width: 45%;
+  margin-top: 8%;
+  font-size: 18px;
+}
+.about-text p{
+width: 90%;
+}
+.about-img{
+  width: 45%;
+}
+.about-img img{
+  max-width: 100%;
+
+}
 
 /* Footer  */
 .footer{
@@ -218,5 +250,33 @@ font-size: 1.5em;
 .contact-list li a :hover{
   color :#2a5f4d;
   }
+
+@media (min-width: 576px) { }
+
+
+@media (max-width: 992px) { 
+/* About Us */
+.about{
+  flex-direction: column-reverse;
+}
+.about-text,.about-img{
+  width: 80%;
+  margin:20px auto;
+}
+.about-text{
+  font-size: 14px;
+}
+.about-title{
+  font-size: 16px;
+  text-shadow: 1px 1px grey;
+
+}
+}
+/* @media (min-width: 992px) { 
+
+ }
+
+
+@media (min-width: 1200px) {  } */
 
   

@@ -9,3 +9,4 @@ router.on("/reservation/:meal_id", window.handleReservationRequest).resolve();
 router.on("/reviews/:meal_id", window.handleReviewsRequest).resolve();
 router.on("/review/:meal_id", window.handleReviewRequest).resolve();
 router.on("/add-meal", window.handleAddMealRequest).resolve();
+router.on("/about", window.handleAboutRequest).resolve();
