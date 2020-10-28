@@ -251,7 +251,6 @@ font-size: 1.5em;
   color :#2a5f4d;
   }
 
-@media (min-width: 576px) { }
 
 
 @media (max-width: 992px) { 
@@ -272,6 +271,28 @@ font-size: 1.5em;
 
 }
 }
+
+
+@media (max-width: 576px) { 
+  h1{
+    font-size: 25px;
+  }
+  h2{
+    font-size: 20px;
+  }
+  .message-header {
+    font-size: 19px;
+  }
+  .message-text {
+    font-size: 15px; 
+  }
+  }
+  
+
+@media (max-width: 576px) { 
+ 
+}
+
 /* @media (min-width: 992px) { 
 
  }
